@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Meross_ModelCompatibility Module 
+ *
+ * @category    Crud Functionality
+ * @package     Meross_ModelCompatibility
+ * @author      Patrick Flores
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <preference for="Meross\ModelCompatibility\Api\Data\GridInterface" type="Meross\ModelCompatibility\Model\Grid" />
+
+    <virtualType name="Meross\ModelCompatibility\Model\ResourceModel\Grid\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">meross_model_compatibility</argument>
+            <argument name="resourceModel" xsi:type="string">Meross\ModelCompatibility\Model\ResourceModel\Grid</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="grid_record_grid_list_data_source" xsi:type="string">Meross\ModelCompatibility\Model\ResourceModel\Grid\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>

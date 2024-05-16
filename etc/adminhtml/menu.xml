@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Meross_ModelCompatibility Module 
+ *
+ * @category    Crud Functionality
+ * @package     Meross_ModelCompatibility
+ * @author      Patrick Flores
+ *
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+    	<add id="Meross_ModelCompatibility::manager" title="Model Compatibility" module="Meross_ModelCompatibility" sortOrder="10" resource="Meross_ModelCompatibility::manager"/>
+    	<add id="Meross_ModelCompatibility::add_row" title="Manage Models" module="Meross_ModelCompatibility" sortOrder="20" parent="Meross_ModelCompatibility::manager" action="grid/grid" resource="Meross_ModelCompatibility::add_row"/>
+    </menu>
+</config>
